@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novialoom - Vos documents augmentés | Accueil</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="appal-theme.css?v=3">
 </head>
 <body>
     <!-- Navigation Commune -->
@@ -40,6 +41,11 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <!-- Formes géométriques décoratives (style Appal) -->
+        <div class="geometric-shape shape-cross shape-cross-1"></div>
+        <div class="geometric-shape shape-circle shape-circle-1"></div>
+        <div class="geometric-shape shape-box shape-box-1"></div>
+
         <div class="hero-container">
             <div class="hero-content">
                 <h1>
@@ -55,8 +61,8 @@
                 </p>
 
                 <div class="hero-cta">
-                    <a href="#modules" class="btn-primary">Découvrir la plateforme</a>
-                    <a href="bibliotheque.html" class="btn-secondary">Explorer les templates</a>
+                    <a href="#modules" class="btn-appal-primary">Découvrir la plateforme</a>
+                    <a href="bibliotheque.html" class="btn-appal-secondary">Explorer les templates</a>
                 </div>
 
                 <div class="trust-bar">
@@ -93,37 +99,37 @@
             <h2 style="text-align: center; font-size: 3em; font-weight: 900; margin-bottom: 60px; color: var(--primary-deep);">Sommaire</h2>
 
             <div class="sommaire-grid">
-                <a href="#constat" class="sommaire-card">
+                <a href="#constat" class="sommaire-card clean-card">
                     <div class="sommaire-number">01</div>
                     <h3>Notre Constat</h3>
                     <p>Les défis que vous rencontrez</p>
                 </a>
 
-                <a href="#equipe" class="sommaire-card">
+                <a href="#equipe" class="sommaire-card clean-card">
                     <div class="sommaire-number">02</div>
                     <h3>Qui sommes-nous ?</h3>
                     <p>Une expertise reconnue</p>
                 </a>
 
-                <a href="#proposition" class="sommaire-card">
+                <a href="#proposition" class="sommaire-card clean-card">
                     <div class="sommaire-number">03</div>
                     <h3>Notre Proposition</h3>
                     <p>Solution souveraine d'analyse augmentée</p>
                 </a>
 
-                <a href="#modules" class="sommaire-card">
+                <a href="#modules" class="sommaire-card clean-card">
                     <div class="sommaire-number">04</div>
                     <h3>Les Modules</h3>
                     <p>Notre offre modulaire</p>
                 </a>
 
-                <a href="#souverainete" class="sommaire-card">
+                <a href="#souverainete" class="sommaire-card clean-card">
                     <div class="sommaire-number">05</div>
                     <h3>Souveraineté</h3>
                     <p>100% Français et sécurisé</p>
                 </a>
 
-                <a href="#pricing" class="sommaire-card">
+                <a href="#pricing" class="sommaire-card clean-card">
                     <div class="sommaire-number">06</div>
                     <h3>Tarifs</h3>
                     <p>Tarification transparente</p>
@@ -313,11 +319,11 @@
             </div>
 
             <div class="modules-grid">
-                <div class="module-category principaux">
-                    <h3 class="module-category-title">
-                        <span class="module-icon">🔵</span>
-                        Principaux
-                    </h3>
+                <div class="module-category principaux clean-card">
+                        <h3 class="module-category-title">
+                            <span class="module-icon">🔵</span>
+                            Principaux
+                        </h3>
                     
                     <div class="module-list">
                         <div class="module-item">
@@ -346,65 +352,64 @@
                             <h4>NoviaDoc</h4>
                             <p>Production structurée de livrables</p>
                         </div>
-                    </div>
                 </div>
 
-                <div class="module-category avances">
-                    <h3 class="module-category-title">
-                        <span class="module-icon">🟣</span>
-                        Avancés
-                    </h3>
-                    
-                    <div class="module-list">
-                        <div class="module-item">
-                            <h4>Predict</h4>
-                            <p>Prévisions & Simulations</p>
-                            <span class="badge-s1">S1 2026</span>
-                        </div>
+                <div class="module-category avances clean-card">
+                        <h3 class="module-category-title">
+                            <span class="module-icon">🟣</span>
+                            Avancés
+                        </h3>
 
-                        <div class="module-item">
-                            <h4>Alert</h4>
-                            <p>Suivi en temps réel des tendances</p>
-                            <span class="badge-s1">S1 2026</span>
-                        </div>
+                        <div class="module-list">
+                            <div class="module-item">
+                                <h4>Predict</h4>
+                                <p>Prévisions & Simulations</p>
+                                <span class="badge-s1">S1 2026</span>
+                            </div>
 
-                        <div class="module-item">
-                            <h4>Benchmark</h4>
-                            <p>Comparaison sectorielle</p>
-                            <span class="badge-s1">S1 2026</span>
-                        </div>
+                            <div class="module-item">
+                                <h4>Alert</h4>
+                                <p>Suivi en temps réel des tendances</p>
+                                <span class="badge-s1">S1 2026</span>
+                            </div>
 
-                        <div class="module-item">
-                            <h4>Simulate</h4>
-                            <p>Modèles, optimisations et modélisation Monte Carlo</p>
-                            <span class="badge-s2">S2 2026</span>
+                            <div class="module-item">
+                                <h4>Benchmark</h4>
+                                <p>Comparaison sectorielle</p>
+                                <span class="badge-s1">S1 2026</span>
+                            </div>
+
+                            <div class="module-item">
+                                <h4>Simulate</h4>
+                                <p>Modèles, optimisations et modélisation Monte Carlo</p>
+                                <span class="badge-s2">S2 2026</span>
+                            </div>
                         </div>
-                    </div>
                 </div>
 
-                <div class="module-category gouvernance">
-                    <h3 class="module-category-title">
-                        <span class="module-icon">🔷</span>
-                        Gouvernance
-                    </h3>
-                    
-                    <div class="module-list">
-                        <div class="module-item">
-                            <h4>Collaborate</h4>
-                            <p>Workflow Collaboratifs</p>
-                            <span class="badge-s2">S2 2026</span>
-                        </div>
+                <div class="module-category gouvernance clean-card">
+                        <h3 class="module-category-title">
+                            <span class="module-icon">🔷</span>
+                            Gouvernance
+                        </h3>
 
-                        <div class="module-item">
-                            <h4>Audit</h4>
-                            <p>Conformité & Traçabilité</p>
-                        </div>
+                        <div class="module-list">
+                            <div class="module-item">
+                                <h4>Collaborate</h4>
+                                <p>Workflow Collaboratifs</p>
+                                <span class="badge-s2">S2 2026</span>
+                            </div>
 
-                        <div class="module-item">
-                            <h4>Connect</h4>
-                            <p>API & Intégrations</p>
+                            <div class="module-item">
+                                <h4>Audit</h4>
+                                <p>Conformité & Traçabilité</p>
+                            </div>
+
+                            <div class="module-item">
+                                <h4>Connect</h4>
+                                <p>API & Intégrations</p>
+                            </div>
                         </div>
-                    </div>
                 </div>
             </div>
 

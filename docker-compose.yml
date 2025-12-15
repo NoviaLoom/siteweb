@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: novialoom-web
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    volumes:
+      - .:/usr/share/nginx/html:ro
+

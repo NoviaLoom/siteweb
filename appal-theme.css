@@ -1,0 +1,458 @@
+/* ============================================
+   NOVIALOOM - THÈME APPAL MODERNE
+   Design minimaliste et professionnel
+   ============================================ */
+
+/* === RESET COMPLET DU HERO VERS STYLE APPAL === */
+.hero {
+    background: linear-gradient(135deg, #4fc3f7 0%, #29b6f6 50%, #03a9f4 100%) !important;
+    min-height: 85vh !important;
+    padding-top: 160px !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* Suppression des anciens effets sombres */
+.hero::after,
+.hero-container::before {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+/* Grande forme organique BLANCHE style Appal - remplace le ::before sombre */
+.hero::before {
+    content: '' !important;
+    display: block !important;
+    position: absolute !important;
+    bottom: -30% !important;
+    left: -10% !important;
+    width: 800px !important;
+    height: 800px !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50% !important;
+    z-index: 0 !important;
+    animation: none !important;
+}
+
+.hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.hero-content h1 {
+    color: white !important;
+    font-size: 4em !important;
+    line-height: 1.2 !important;
+    font-weight: 800 !important;
+}
+
+.hero-subtitle {
+    color: white !important;
+    text-shadow: none !important;
+    opacity: 0.95 !important;
+}
+
+.hero-content p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Désactiver le gradient text dans le hero pour style Appal épuré */
+.hero .gradient-text {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: white !important;
+    background-clip: unset !important;
+    color: white !important;
+}
+
+/* === FORMES GÉOMÉTRIQUES DÉCORATIVES === */
+.geometric-shape {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.1;
+}
+
+.shape-cross {
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.shape-cross::before,
+.shape-cross::after {
+    content: '';
+    position: absolute;
+    background: var(--primary-blue);
+}
+
+.shape-cross::before {
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.shape-cross::after {
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.shape-circle {
+    width: 60px;
+    height: 60px;
+    border: 3px solid var(--accent-electric);
+    border-radius: 50%;
+}
+
+.shape-box {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--accent-purple);
+    border-radius: 8px;
+    transform: rotate(45deg);
+}
+
+.shape-semicircle {
+    width: 80px;
+    height: 40px;
+    border: 3px solid var(--accent-coral);
+    border-radius: 80px 80px 0 0;
+}
+
+/* Positionnement des formes */
+.hero .shape-cross-1 {
+    top: 15%;
+    right: 10%;
+}
+
+.hero .shape-circle-1 {
+    top: 40%;
+    left: 5%;
+}
+
+.hero .shape-box-1 {
+    bottom: 20%;
+    right: 15%;
+}
+
+/* === TRUST BAR CLAIRE === */
+.trust-bar {
+    background: white !important;
+    border: none !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 40px rgba(10, 31, 61, 0.12) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.trust-label {
+    color: var(--primary-deep) !important;
+    font-weight: 700 !important;
+}
+
+.trust-sublabel {
+    color: var(--neutral-gray) !important;
+    font-size: 0.9em !important;
+}
+
+/* === SECTIONS ALTERNÉES IMAGE/TEXTE === */
+.section-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.section-split.reverse {
+    direction: rtl;
+}
+
+.section-split.reverse > * {
+    direction: ltr;
+}
+
+.section-image {
+    position: relative;
+}
+
+.section-image img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(10, 31, 61, 0.15);
+}
+
+.section-content h2 {
+    font-size: 3em;
+    font-weight: 900;
+    margin-bottom: 25px;
+    color: var(--primary-deep);
+    line-height: 1.2;
+}
+
+.section-content p {
+    font-size: 1.15em;
+    color: var(--neutral-gray);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    padding: 15px 0;
+    padding-left: 40px;
+    position: relative;
+    color: var(--primary-deep);
+    font-weight: 600;
+}
+
+.feature-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, var(--accent-electric), var(--primary-blue));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.9em;
+}
+
+/* === STATISTIQUES (STYLE APPAL) === */
+.stats-section {
+    background: linear-gradient(135deg, var(--primary-navy), var(--primary-deep));
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    text-align: center;
+}
+
+.stat-item {
+    position: relative;
+}
+
+.stat-number {
+    font-size: 4em;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--accent-electric), white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.stat-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/* === CARTES SIMPLES ET ÉPURÉES === */
+.clean-card {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(10, 31, 61, 0.08);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.clean-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-electric);
+    box-shadow: 0 20px 60px rgba(0, 212, 255, 0.15);
+}
+
+.clean-card-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--accent-electric), var(--primary-blue));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    margin-bottom: 25px;
+}
+
+.clean-card h3 {
+    font-size: 1.6em;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--primary-deep);
+}
+
+.clean-card p {
+    color: var(--neutral-gray);
+    line-height: 1.7;
+}
+
+/* === BOUTONS STYLE APPAL === */
+.btn-appal-primary {
+    background: #6B6FE8 !important;
+    color: white !important;
+    padding: 18px 40px !important;
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    font-size: 1.05em !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 8px 20px rgba(107, 111, 232, 0.3) !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+}
+
+.btn-appal-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 30px rgba(107, 111, 232, 0.4) !important;
+    background: #5558d8 !important;
+}
+
+.btn-appal-secondary {
+    background: white !important;
+    color: #6B6FE8 !important;
+    padding: 18px 40px !important;
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    font-size: 1.05em !important;
+    border: 2px solid white !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+}
+
+.btn-appal-secondary:hover {
+    background: rgba(255, 255, 255, 0.9) !important;
+    color: #5558d8 !important;
+    transform: translateY(-2px) !important;
+}
+
+/* === ICÔNES DE FONCTIONNALITÉS === */
+.feature-icon-box {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(107, 111, 232, 0.1), rgba(0, 212, 255, 0.1));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.feature-icon-box::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-electric));
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.clean-card:hover .feature-icon-box::before {
+    opacity: 0.1;
+}
+
+/* === BADGE "15% OFF" STYLE === */
+.discount-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: linear-gradient(135deg, #ff6b9d, #c44569);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9em;
+    box-shadow: 0 4px 15px rgba(196, 69, 105, 0.4);
+}
+
+/* === GRILLE 3 COLONNES CARACTÉRISTIQUES === */
+.features-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+/* === SECTION CLIENTS/LOGOS === */
+.clients-section {
+    padding: 80px 0;
+    background: #f8f9ff;
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    align-items: center;
+}
+
+.client-logo {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.client-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* === DESIGN ÉPURÉ GÉNÉRAL === */
+.minimal-section {
+    padding: 120px 0;
+    background: white;
+}
+
+.minimal-section-alt {
+    padding: 120px 0;
+    background: #f8f9ff;
+}
+
+/* Suppression des effets "trop flashy" */
+.no-particles .hero-particles,
+.no-mesh .gradient-mesh,
+.no-cyberpunk .cyberpunk-border {
+    display: none !important;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+    .section-split {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
